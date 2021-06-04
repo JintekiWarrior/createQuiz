@@ -14,7 +14,6 @@ const createQuizSuccess = function (res) {
 
 const indexQuizSuccess = function (res) {
   $('.auth-message').text('Index Success')
-  // console.log(res)
   let quizHTML = ''
   res.quiz.forEach(quiz => {
     quizHTML += `
@@ -23,6 +22,7 @@ const indexQuizSuccess = function (res) {
         <p>Description: ${quiz.description}</p>
         <p>Id: ${quiz._id}</p>
       </div>
+      <button class="delete-quiz" data-id=${quiz._id}>Delete Quiz</button>
     `
   })
   $('#quiz-index').html(quizHTML)
@@ -33,6 +33,10 @@ const onUpdateSuccess = function (res) {
   $('auth-message').text('Update Successful')
 }
 
+const onDeleteSuccess = function (res) {
+  $('.auth-message').text('Delete Success')
+}
+
 const errorHandler = function (err) {
   $('auth-message').text('Oops! Something went wrong. Status: ' + err.status)
 }
@@ -41,5 +45,6 @@ module.exports = {
   createQuizSuccess,
   indexQuizSuccess,
   onUpdateSuccess,
+  onDeleteSuccess,
   errorHandler
 }

@@ -40,6 +40,13 @@ const onUpdateQuiz = function (event) {
 
 const onDeleteQuiz = function (event) {
   event.preventDefault()
+
+  const deleteButton = event.target
+  const quizId = $(deleteButton).data('id')
+
+  api.deleteQuiz(quizId)
+    .then(ui.onDeleteSuccess)
+    .catch(ui.errorHandler)
 }
 
 module.exports = {

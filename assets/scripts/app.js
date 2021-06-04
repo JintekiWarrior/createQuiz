@@ -30,5 +30,5 @@ $(() => {
   // event listener for the update-quiz class attached to a form
   $('.update-quiz').on('submit', quizEvents.onUpdateQuiz)
   // event listener for the delete-quiz class attached to a form
-  $('.delete-quiz').on('click', quizEvents.onDeleteQuiz)
+  $('#quiz-index').on('click', '.delete-quiz', quizEvents.onDeleteQuiz)
 })

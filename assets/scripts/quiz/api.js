@@ -34,8 +34,19 @@ const updateQuiz = function (quizId, quizData) {
   })
 }
 
+const deleteQuiz = function (quizId) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/quizzes/' + quizId,
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
   createQuiz,
   indexQuiz,
-  updateQuiz
+  updateQuiz,
+  deleteQuiz
 }
