@@ -37,9 +37,13 @@
       <!-- Message for sign in successes and error handlers -->
       <p class="auth-message"></p>
 
-      <!-- This di conatins all the forms and info for after the user signs in -->
+      <!-- This div conatins all the forms and info for after the user signs in -->
       <div class="after-sign-in">
+
+        <!-- sign out button -->
         <button class="sign-out">Sign Out</button>
+
+        <!-- Change password form -->
         <div class="change-password-container">
           <form class="change-password">
             <input required name="passwords[old]" type="password" placeholder="old password"/>
@@ -47,8 +51,12 @@
             <button type="submit">Submit</button>
           </form>
         </div>
+
+        <!-- Quiz CRUD forms -->
         <div class="Quiz Template"></div>
           <h3>Quiz Template</h3>
+
+          <!-- Create quiz form -->
           <form class="create-quiz">
             <input name="quiz[title]" type="title" placeholder="quiz title">
             <textarea name="quiz[description]" id="quiz-description" cols="30" rows="10">
@@ -56,7 +64,24 @@
             </textarea>
             <button type="submit">Create</button>
           </form>
+
+          <!-- Update Quiz form -->
+          <h4>Update Quiz</h4>
+          <form class="update-quiz">
+            <input required name="quiz[id]" type="text" placeholder="quiz id">
+            <input required name="quiz[title]" type="title" placeholder="new quiz title">
+            <textarea name="quiz[description]" cols="30" rows="10">
+              Add new quiz description here
+            </textarea>
+            <button type="submit">Update Quiz</button>
+          </form>
+
+          <!-- Index quizzes button -->
           <button class="index-quiz">Index Quizzes</button>
+
+          <!-- delete button -->
+          <button class="delete-button">Delete Quiz</button>
+
           <div id="quiz-display"></div>
           <div id="quiz-index"></div>
       </div>

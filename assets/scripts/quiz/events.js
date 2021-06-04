@@ -26,7 +26,25 @@ const onIndexQuiz = function (event) {
     .catch(ui.errorHandler)
 }
 
+const onUpdateQuiz = function (event) {
+  event.preventDefault()
+
+  const quizData = getFormFields(event.target)
+
+  const quizId = quizData.quiz.id
+
+  api.updateQuiz(quizId, quizData)
+    .then(ui.onQuizSuccess)
+    .catch(ui.errorHandler)
+}
+
+const onDeleteQuiz = function (event) {
+  event.preventDefault()
+}
+
 module.exports = {
   onCreateQuiz,
-  onIndexQuiz
+  onIndexQuiz,
+  onUpdateQuiz,
+  onDeleteQuiz
 }

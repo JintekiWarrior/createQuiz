@@ -22,7 +22,20 @@ const indexQuiz = function (data) {
   })
 }
 
+const updateQuiz = function (quizId, quizData) {
+  console.log(quizId)
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/quizzes/' + quizId,
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    },
+    data: quizData
+  })
+}
+
 module.exports = {
   createQuiz,
-  indexQuiz
+  indexQuiz,
+  updateQuiz
 }

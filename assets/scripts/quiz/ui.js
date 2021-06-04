@@ -14,17 +14,23 @@ const createQuizSuccess = function (res) {
 
 const indexQuizSuccess = function (res) {
   $('.auth-message').text('Index Success')
-  console.log(res)
+  // console.log(res)
   let quizHTML = ''
   res.quiz.forEach(quiz => {
     quizHTML += `
       <div>
         <h3>${quiz.title}</h3>
         <p>Description: ${quiz.description}</p>
+        <p>Id: ${quiz._id}</p>
       </div>
     `
   })
   $('#quiz-index').html(quizHTML)
+}
+
+const onUpdateSuccess = function (res) {
+  $('.update-quiz').trigger('reset')
+  $('auth-message').text('Update Successful')
 }
 
 const errorHandler = function (err) {
@@ -34,5 +40,6 @@ const errorHandler = function (err) {
 module.exports = {
   createQuizSuccess,
   indexQuizSuccess,
+  onUpdateSuccess,
   errorHandler
 }

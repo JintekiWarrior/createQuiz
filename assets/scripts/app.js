@@ -27,4 +27,8 @@ $(() => {
   $('.create-quiz').on('submit', quizEvents.onCreateQuiz)
   // event listener for the index-quiz class attached to a button
   $('.index-quiz').on('click', quizEvents.onIndexQuiz)
+  // event listener for the update-quiz class attached to a form
+  $('.update-quiz').on('submit', quizEvents.onUpdateQuiz)
+  // event listener for the delete-quiz class attached to a form
+  $('.delete-quiz').on('click', quizEvents.onDeleteQuiz)
 })
