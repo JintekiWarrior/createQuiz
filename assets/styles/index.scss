@@ -1,1 +1,130 @@
 @import '~bootstrap/scss/bootstrap';
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+// container for the sign in and sign up registration
+.reg-container {
+  margin: auto;
+  max-width: 40rem;
+  height: 40rem;
+  background-color: lightblue;
+  position: relative;
+  top: 15vh;
+  border-radius: 8%;
+}
+
+// container to format the sign in and sign up forms inside the regular reg-container
+.inside-container {
+  margin: auto;
+  position: relative;
+  top: 5rem;
+  // background-color: red;
+  width: 30rem;
+  height: 30rem;
+}
+
+// sign up and sign in h3 tag class
+.sign-heading {
+  font-size: 3rem;
+  margin: 1rem 1rem;
+  text-align: center;
+}
+
+// class for the input boxes for sign up and sign in
+.auth-input-box {
+  margin-top: 2px;
+  padding: 5px 0 5px 0;
+  width: 30rem;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+// class for the buttons used for sign in and sign up
+.auth-input-button {
+  width: 30rem;
+  margin-top: 2px;
+  padding: 5px 0 5px 0;
+}
+
+.after-sign-in {
+  display: inline-block;
+  background-color: lightgrey;
+  height: 100vh;
+  width: 100vw;
+}
+
+// container for the sidebar info
+.sidebar-container div {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: blue;
+  height: 100vh;
+  width: 15rem;
+}
+
+// Template for the whole quiz creation process, used as a container.
+// .quiz-template {
+//   display: inline;
+//   margin: 0;
+// //   position: relative;
+// //   left: 15.1rem;
+// //   top: 4rem;
+// //   max-width: 90rem;
+// //   height: 100vh;
+// //   background-color: lightblue;
+// }
+
+// container to use to center all the forms and buttons used to create a quiz.
+.quiz-template-container {
+  display: inline-block;
+  position: relative;
+  left: 30rem;
+  margin: 0;
+  background-color: orange;
+  height: 80vh;
+  max-width: 50vw;
+}
+
+// The main header of the page
+#main-header {
+  text-align: center;
+}
+
+// container for just the create quiz forms
+.create-quiz {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+// title Input for the create quiz form
+#create-quiz-input {
+  padding: 1rem;
+}
+
+// button to submit the create quiz form
+#create-quiz-submit {
+  padding: 1rem;
+}
+
+// button to index the quizes
+.index-quiz {
+  position: relative;
+  top: 0rem;
+  padding: .8rem;
+  width: 15.1rem;
+}
+
+// text displayed from index
+.index-text {
+  color: white;
+}

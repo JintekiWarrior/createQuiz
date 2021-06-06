@@ -3,7 +3,12 @@
 const store = require('./../store')
 
 // This info is hidden until sign in is successful
-$('.after-sign-in').hide()
+// $('.after-sign-in').hide()
+$('.before-sign-in').hide()
+// This info will hide the change password form until the button is clicked
+$('.change-password').hide()
+// This will hide the update quiz form
+$('.update-quiz').hide()
 
 // User interface event that triggers if the ajax call is successful
 // This will reset the form fields, and send a success message when the user
@@ -40,6 +45,7 @@ const signOutSuccess = function (response) {
 const changePasswordSuccess = function () {
   $('.change-password').trigger('reset')
   $('.auth-message').text('Password Changed Successfully!')
+  $('.change-password').hide()
 }
 
 // Handles all authorization errors and prints a status message.

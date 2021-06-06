@@ -15,22 +15,26 @@
 
       <!-- This div contains all the forms before the user signs in. -->
       <div class="before-sign-in">
-        <div class="sign-up-container">
-          <h3>Sign Up</h3>
-          <form class="sign-up">
-            <input required name="credentials[email]" type="email" placeholder="Email Address"/>
-            <input required name="credentials[password]" type="password" placeholder="password"/>
-            <input required name="credentials[password_confirmation]" type="password" placeholder="password confirmation"/>
-            <button type="submit">Sign Up</button>
-          </form>
-        </div>
-        <div class="sign-in-container">
-          <h3>Sign In</h3>
-          <form class="sign-in">
-            <input required name="credentials[email]" type="email" placeholder="Email Address"/>
-            <input required name="credentials[password]" type="password" placeholder="password"/>
-            <button type="submit">Sign In</button>
-          </form>
+        <div class="reg-container">
+          <div class="inside-container">
+            <div class="sign-in-container">
+              <h3 class="sign-heading">Sign In</h3>
+              <form class="sign-in">
+                <input required class="auth-input-box" name="credentials[email]" type="email" placeholder="Email Address"/>
+                <input required class="auth-input-box" name="credentials[password]" type="password" placeholder="password"/>
+                <button class="auth-input-button" type="submit">Sign In</button>
+              </form>
+            </div>
+            <div class="sign-up-container">
+              <h3 class="sign-heading">Sign Up</h3>
+              <form class="sign-up">
+                <input required class="auth-input-box" name="credentials[email]" type="email" placeholder="Email Address"/>
+                <input required class="auth-input-box" name="credentials[password]" type="password" placeholder="password"/>
+                <input required class="auth-input-box" name="credentials[password_confirmation]" type="password" placeholder="password confirmation"/>
+                <button class="auth-input-button" type="submit">Sign Up</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -39,51 +43,55 @@
 
       <!-- This div conatins all the forms and info for after the user signs in -->
       <div class="after-sign-in">
-
-        <!-- sign out button -->
-        <button class="sign-out">Sign Out</button>
-
-        <!-- Change password form -->
-        <div class="change-password-container">
-          <form class="change-password">
-            <input required name="passwords[old]" type="password" placeholder="old password"/>
-            <input required name="passwords[new]" type="password" placeholder="new password"/>
-            <button type="submit">Submit</button>
-          </form>
+        <!-- Quiz CRUD forms -->
+        <div class="sidebar-container">
+          <!-- Index quizzes button -->
+          <button class="index-quiz">Index Quizzes</button>
+          <!-- delete button -->
+          <div id="quiz-display"></div>
         </div>
 
-        <!-- Quiz CRUD forms -->
-        <div class="Quiz Template"></div>
-          <h3>Quiz Template</h3>
 
-          <!-- Create quiz form -->
-          <form class="create-quiz">
-            <input name="quiz[title]" type="title" placeholder="quiz title">
-            <textarea name="quiz[description]" id="quiz-description" cols="30" rows="10">
-              Add what the quiz is about here
-            </textarea>
-            <button type="submit">Create</button>
-          </form>
+        <div class="quiz-template-container">
+          <h1 id="main-header">Quiz Creator</h1>
+
+          <div class="create-quiz-container">
+            <!-- Create quiz form -->
+            <form class="create-quiz">
+              <input id="create-quiz-input" name="quiz[title]" type="text" placeholder="quiz title">
+              <textarea id="create-quiz-description" name="quiz[description]" cols="30" rows="10">
+                Add what the quiz is about here
+              </textarea>
+              <button id="create-quiz-submit" type="submit">Create</button>
+            </form>
+          </div>
 
           <!-- Update Quiz form -->
           <h4>Update Quiz</h4>
+          <button class="update-quiz-show">Update Quiz</button>
           <form class="update-quiz">
             <input required name="quiz[id]" type="text" placeholder="quiz id">
             <input required name="quiz[title]" type="title" placeholder="new quiz title">
             <textarea name="quiz[description]" cols="30" rows="10">
               Add new quiz description here
             </textarea>
-            <button type="submit">Update Quiz</button>
+            <button type="submit">Submit</button>
           </form>
 
-          <!-- Index quizzes button -->
-          <button class="index-quiz">Index Quizzes</button>
+          <!-- Change password form -->
+          <div class="change-password-container">
+            <button class="change-password-show">Change Password</button>
+            <form class="change-password">
+              <input required name="passwords[old]" type="password" placeholder="old password"/>
+              <input required name="passwords[new]" type="password" placeholder="new password"/>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
 
-          <!-- delete button -->
-          <!-- <button class="delete-button">Delete Quiz</button> -->
+          <!-- sign out button -->
+          <button class="sign-out">Sign Out</button>
+        </div>
 
-          <div id="quiz-display"></div>
-          <div id="quiz-index"></div>
       </div>
 
     </body>

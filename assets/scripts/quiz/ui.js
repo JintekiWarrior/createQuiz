@@ -18,14 +18,13 @@ const indexQuizSuccess = function (res) {
   res.quiz.forEach(quiz => {
     quizHTML += `
       <div>
-        <h3>${quiz.title}</h3>
-        <p>Description: ${quiz.description}</p>
-        <p>Id: ${quiz._id}</p>
+        <h3 class="index-text">${quiz.title}</h3>
+        <p class="index-text">Description: ${quiz.description}</p>
       </div>
       <button class="delete-quiz" data-id=${quiz._id}>Delete Quiz</button>
     `
   })
-  $('#quiz-index').html(quizHTML)
+  $('#quiz-display').html(quizHTML)
 }
 
 const onUpdateSuccess = function (res) {
