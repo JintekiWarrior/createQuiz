@@ -38,23 +38,24 @@
         </div>
       </div>
 
-      <!-- Message for sign in successes and error handlers -->
-      <p class="auth-message"></p>
-
       <!-- This div conatins all the forms and info for after the user signs in -->
       <div class="after-sign-in">
         <!-- Quiz CRUD forms -->
         <div class="sidebar-container">
           <!-- Index quizzes button -->
-          <button class="index-quiz">Index Quizzes</button>
+          <button class="index-quiz">My Quizzes</button>
           <!-- delete button -->
           <div id="quiz-display"></div>
         </div>
 
+        <div class="navbar">
+          <h1 id="main-header">Quiz Crafter</h1>
+        </div>
+
 
         <div class="quiz-template-container">
-          <h1 id="main-header">Quiz Creator</h1>
 
+          <h2 id="second-heading">Craft a Quiz</h2>
           <div class="create-quiz-container">
             <!-- Create quiz form -->
             <form class="create-quiz">
@@ -64,19 +65,18 @@
               </textarea>
               <button id="create-quiz-submit" type="submit">Create</button>
             </form>
+            <!-- Update Quiz form -->
+
+            <form class="update-quiz">
+              <!-- <input required name="quiz[id]" type="text" placeholder="quiz id"> -->
+              <input required id="update-quiz-title" name="quiz[title]" type="text" placeholder="new quiz title">
+              <textarea required id="update-quiz-description" name="quiz[description]" cols="30" rows="10">
+                Add new quiz description here
+              </textarea>
+              <button id="update-quiz-submit" type="submit">Update Quiz</button>
+            </form>
           </div>
 
-          <!-- Update Quiz form -->
-          <h4>Update Quiz</h4>
-          <button class="update-quiz-show">Update Quiz</button>
-          <form class="update-quiz">
-            <input required name="quiz[id]" type="text" placeholder="quiz id">
-            <input required name="quiz[title]" type="title" placeholder="new quiz title">
-            <textarea name="quiz[description]" cols="30" rows="10">
-              Add new quiz description here
-            </textarea>
-            <button type="submit">Submit</button>
-          </form>
 
           <!-- Change password form -->
           <div class="change-password-container">
@@ -86,13 +86,17 @@
               <input required name="passwords[new]" type="password" placeholder="new password"/>
               <button type="submit">Submit</button>
             </form>
+            <!-- sign out button -->
+            <button class="sign-out">Sign Out</button>
           </div>
 
-          <!-- sign out button -->
-          <button class="sign-out">Sign Out</button>
+
         </div>
 
       </div>
+
+      <!-- Message for sign in successes and error handlers -->
+      <p class="auth-message"></p>
 
     </body>
 </html>

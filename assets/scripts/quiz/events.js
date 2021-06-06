@@ -4,6 +4,8 @@ const getFormFields = require('./../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
+const store = require('./../store.js')
+
 // This will get the data from the quiz create form and make an ajax call.
 // If successful the ui will show the created quiz, otherwise error.
 //
@@ -31,7 +33,8 @@ const onUpdateQuiz = function (event) {
 
   const quizData = getFormFields(event.target)
 
-  const quizId = quizData.quiz.id
+  const quizId = store.update
+  console.log(quizId)
 
   api.updateQuiz(quizId, quizData)
     .then(ui.onQuizSuccess)

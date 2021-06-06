@@ -1,6 +1,6 @@
 'use strict'
 
-// const store = require('./../store')
+const store = require('./../store')
 
 const createQuizSuccess = function (res) {
   $('.create-quiz').trigger('reset')
@@ -22,6 +22,7 @@ const indexQuizSuccess = function (res) {
         <p class="index-text">Description: ${quiz.description}</p>
       </div>
       <button class="delete-quiz" data-id=${quiz._id}>Delete Quiz</button>
+      <button class="update-quiz-show" data-id=${quiz._id}>Update Quiz</button>
     `
   })
   $('#quiz-display').html(quizHTML)

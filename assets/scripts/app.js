@@ -32,9 +32,9 @@ $(() => {
   // event listener for the index-quiz class attached to a button
   $('.index-quiz').on('click', quizEvents.onIndexQuiz)
   // this button will show the update quiz form
-  $('.update-quiz-show').on('click', appFunctions.showUpdateForm)
+  $('#quiz-display').on('click', '.update-quiz-show', appFunctions.showUpdateForm)
   // event listener for the update-quiz class attached to a form
   $('.update-quiz').on('submit', quizEvents.onUpdateQuiz)
   // event listener for the delete-quiz class attached to a form
-  $('#quiz-index').on('click', '.delete-quiz', quizEvents.onDeleteQuiz)
+  $('#quiz-display').on('click', '.delete-quiz', quizEvents.onDeleteQuiz)
 })

@@ -3,8 +3,8 @@
 const store = require('./../store')
 
 // This info is hidden until sign in is successful
-// $('.after-sign-in').hide()
-$('.before-sign-in').hide()
+$('.after-sign-in').hide()
+// $('.before-sign-in').hide()
 // This info will hide the change password form until the button is clicked
 $('.change-password').hide()
 // This will hide the update quiz form
@@ -38,6 +38,7 @@ const signInSuccess = function (response) {
 const signOutSuccess = function (response) {
   $('.auth-message').text('Sign out successful!')
   store.user = null
+  store.update = null
   $('.before-sign-in').show()
   $('.after-sign-in').hide()
 }
