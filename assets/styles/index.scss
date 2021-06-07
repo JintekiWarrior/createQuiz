@@ -11,7 +11,7 @@ html, body {
   margin: auto;
   max-width: 40rem;
   height: 40rem;
-  background-color: lightblue;
+  background-color: #90B1D9;
   position: relative;
   top: 15vh;
   border-radius: 8%;
@@ -54,7 +54,6 @@ html, body {
   display: grid;
   grid-template-columns: 20rem auto;
   grid-template-rows: 10rem auto;
-  background-color: lightgrey;
   height: 100vh;
   width: 100vw;
 }
@@ -64,7 +63,7 @@ html, body {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: yellow;
+  background-color: #1C0A93;
 }
 
 // container for the sidebar info
@@ -72,7 +71,7 @@ html, body {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
-  background-color: blue;
+  background-color: #1D7CF0;
 }
 
 // Template for the whole quiz creation process, used as a container.
@@ -95,13 +94,14 @@ html, body {
   display: grid;
   grid-template-columns: 10rem auto 10rem;
   grid-template-rows: 5rem auto 2rem;
-  background-color: orange;
+  background-color: #90B1D9;
 }
 
 // The main header of the page
 #main-header {
   text-align: center;
   font-size: 4rem;
+  color: white;
 }
 
 #second-heading {
