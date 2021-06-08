@@ -11,6 +11,8 @@ const authEvents = require('./auth/events.js')
 
 const quizEvents = require('./quiz/events.js')
 
+const questionEvents = require('./question/events.js')
+
 const appFunctions = require('./functions.js')
 
 $(() => {
@@ -37,4 +39,10 @@ $(() => {
   $('.update-quiz').on('submit', quizEvents.onUpdateQuiz)
   // event listener for the delete-quiz class attached to a form
   $('#quiz-display').on('click', '.delete-quiz', quizEvents.onDeleteQuiz)
+  // event listener for the show-quiz-button class attached to a button
+  $('#quiz-display').on('click', '.show-quiz-button', quizEvents.onShowQuiz)
+
+  // Question template event listeners
+  // event listener for the create-question class attached to the form
+  $('.create-question').on('submit', questionEvents.onCreateQuestion)
 })

@@ -44,7 +44,6 @@
         <div class="sidebar-container">
           <!-- Index quizzes button -->
           <button class="index-quiz">My Quizzes</button>
-          <!-- delete button -->
           <div id="quiz-display"></div>
         </div>
 
@@ -65,8 +64,9 @@
               </textarea>
               <button id="create-quiz-submit" type="submit">Create</button>
             </form>
-            <!-- Update Quiz form -->
 
+
+            <!-- Update Quiz form -->
             <form class="update-quiz">
               <!-- <input required name="quiz[id]" type="text" placeholder="quiz id"> -->
               <input required id="update-quiz-title" name="quiz[title]" type="text" placeholder="new quiz title">
@@ -75,6 +75,19 @@
               </textarea>
               <button id="update-quiz-submit" type="submit">Update Quiz</button>
             </form>
+
+            <!-- show a quiz -->
+            <div id="show-quiz-display"></div>
+
+            <!-- Create a question -->
+            <form class="create-question">
+              <input class="create-question-input" name="questions[question]" type="text" placeholder="enter question">
+              <input class="create-right-answer" name="questions[rightAnswer]" type="text" placeholder="enter correct answer">
+              <input class="create-wrong-answer" name="questions[wrongAnswer]" type="text" placeholder="enter wrong answer">
+              <input class="create-wrong-answer" name="questions[wrongAnswer]" type="text" placeholder="enter wrong answer">
+              <button id="create-question" type="submit">Create</button>
+            </form>
+
           </div>
 
 

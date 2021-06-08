@@ -28,6 +28,18 @@ const onIndexQuiz = function (event) {
     .catch(ui.errorHandler)
 }
 
+const onShowQuiz = function (event) {
+  event.preventDefault()
+
+  const showButton = event.target
+  const quizId = $(showButton).data('id')
+  console.log(quizId)
+
+  api.showQuiz(quizId)
+    .then(ui.onShowSuccess)
+    .catch(ui.errorHandler)
+}
+
 const onUpdateQuiz = function (event) {
   event.preventDefault()
 
@@ -46,6 +58,7 @@ const onDeleteQuiz = function (event) {
 
   const deleteButton = event.target
   const quizId = $(deleteButton).data('id')
+  console.log(quizId)
 
   api.deleteQuiz(quizId)
     .then(ui.onDeleteSuccess)
@@ -55,6 +68,7 @@ const onDeleteQuiz = function (event) {
 module.exports = {
   onCreateQuiz,
   onIndexQuiz,
+  onShowQuiz,
   onUpdateQuiz,
   onDeleteQuiz
 }

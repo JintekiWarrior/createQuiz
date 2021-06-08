@@ -3,6 +3,7 @@
 const store = require('./../store')
 
 const createQuizSuccess = function (res) {
+  console.log(res)
   $('.create-quiz').trigger('reset')
   $('.auth-message').text('Quiz Created')
 
@@ -23,9 +24,14 @@ const indexQuizSuccess = function (res) {
       </div>
       <button class="delete-quiz" data-id=${quiz._id}>Delete Quiz</button>
       <button class="update-quiz-show" data-id=${quiz._id}>Update Quiz</button>
+      <button class="show-quiz-button" data-id=${quiz._id}>Show Quiz</button>
     `
   })
   $('#quiz-display').html(quizHTML)
+}
+
+const onShowSuccess = function (res) {
+  console.log(res)
 }
 
 const onUpdateSuccess = function (res) {
@@ -46,5 +52,6 @@ module.exports = {
   indexQuizSuccess,
   onUpdateSuccess,
   onDeleteSuccess,
+  onShowSuccess,
   errorHandler
 }

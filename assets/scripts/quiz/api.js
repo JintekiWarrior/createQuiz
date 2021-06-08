@@ -22,6 +22,16 @@ const indexQuiz = function (data) {
   })
 }
 
+const showQuiz = function (quizId) {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/quizzes/' + quizId,
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
 const updateQuiz = function (quizId, quizData) {
   console.log(quizId)
   return $.ajax({
@@ -48,5 +58,6 @@ module.exports = {
   createQuiz,
   indexQuiz,
   updateQuiz,
-  deleteQuiz
+  deleteQuiz,
+  showQuiz
 }
