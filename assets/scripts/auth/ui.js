@@ -9,8 +9,6 @@ $('.after-sign-in').hide()
 $('.change-password').hide()
 // This will hide the update quiz form
 $('.update-quiz').hide()
-// Will hide the show quiz container
-$('#show-quiz-display').hide()
 
 // User interface event that triggers if the ajax call is successful
 // This will reset the form fields, and send a success message when the user

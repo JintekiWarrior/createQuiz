@@ -31,7 +31,22 @@ const indexQuizSuccess = function (res) {
 }
 
 const onShowSuccess = function (res) {
+  $('.create-quiz').hide()
   console.log(res)
+  $('#show-quiz-display').html(`
+    <h3 id="show-quiz-title">${res.title}</h3>
+    <p id="show-quiz-description">${res.description}</p>
+    `)
+  let questionHTML = ''
+  res.questions.forEach(quest => {
+    questionHTML += `
+    <h3>${quest.question}</h3>
+    <p>${quest.rightAnswer}</p>
+    <p>${quest.wrongAnswer}</p>
+    <p>${quest.wrongAnswer2}</p>
+    `
+  })
+  $('#show-question-display').html(questionHTML)
 }
 
 const onUpdateSuccess = function (res) {

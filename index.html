@@ -78,14 +78,15 @@
 
             <!-- show a quiz -->
             <div id="show-quiz-display"></div>
+            <div id="show-question-display"></div>
 
             <!-- Create a question -->
             <form class="create-question">
-              <input class="create-question-input" name="questions[question]" type="text" placeholder="enter question">
-              <input class="create-right-answer" name="questions[rightAnswer]" type="text" placeholder="enter correct answer">
-              <input class="create-wrong-answer" name="questions[wrongAnswer]" type="text" placeholder="enter wrong answer">
-              <input class="create-wrong-answer" name="questions[wrongAnswer]" type="text" placeholder="enter wrong answer">
-              <button id="create-question" type="submit">Create</button>
+              <input class="create-question-input" name="question[question]" type="text" placeholder="enter question">
+              <input class="create-right-answer" name="question[rightAnswer]" type="text" placeholder="enter correct answer">
+              <input class="create-wrong-answer" name="question[wrongAnswer]" type="text" placeholder="enter wrong answer">
+              <input class="create-wrong-answer" name="question[wrongAnswer2]" type="text" placeholder="enter wrong answer">
+              <button class="create-question" type="submit">Create</button>
             </form>
 
           </div>

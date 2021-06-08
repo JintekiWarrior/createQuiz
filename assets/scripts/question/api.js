@@ -1,7 +1,7 @@
 'use strict'
 
 const config = require('./../config.js')
-const store = require('./../store.js')
+// const store = require('./../store.js')
 
 const createQuestion = function (data) {
   return $.ajax({

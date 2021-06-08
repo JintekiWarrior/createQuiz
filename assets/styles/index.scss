@@ -140,9 +140,31 @@ html, body {
 }
 
 #show-quiz-display {
-  height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+#show-quiz-title {
+  text-align: center;
+  font-size: 3rem
+}
+
+#show-quiz-description {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.create-question {
+  display: flex;
+  flex-direction: column;
+
+  & input {
+    padding: 1rem;
+  }
+
+  & button {
+    padding: 1rem;
+  }
 }
 
 // button to index the quizes

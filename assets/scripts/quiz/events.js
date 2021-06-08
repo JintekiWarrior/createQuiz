@@ -33,7 +33,7 @@ const onShowQuiz = function (event) {
 
   const showButton = event.target
   const quizId = $(showButton).data('id')
-  console.log(quizId)
+  store.quizId = quizId
 
   api.showQuiz(quizId)
     .then(ui.onShowSuccess)

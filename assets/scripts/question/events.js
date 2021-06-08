@@ -8,9 +8,12 @@ const onCreateQuestion = function (event) {
   event.preventDefault()
 
   const data = getFormFields(event.target)
+  const quizId = store.quizId
+  data.question.quizId = quizId
+  console.log(data)
 
   api.createQuestion(data)
-    .then(ui.createQuestionSuccess)
+    .then(ui.onCreateQuestionSuccess)
     .catch(ui.errorHandler)
 }
 
