@@ -4,7 +4,7 @@ const store = require('./../store')
 
 // This info is hidden until sign in is successful
 $('.after-sign-in').hide()
-// $('.before-sign-in').hide()
+$('.sign-up-container').hide()
 // This info will hide the change password form until the button is clicked
 $('.change-password').hide()
 // This will hide the update quiz form

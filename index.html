@@ -10,19 +10,21 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
     </head>
     <body>
 
       <!-- This div contains all the forms before the user signs in. -->
       <div class="before-sign-in">
         <div class="reg-container">
-          <div class="inside-container">
             <div class="sign-in-container">
               <h3 class="sign-heading">Sign In</h3>
               <form class="sign-in">
                 <input required class="auth-input-box" name="credentials[email]" type="email" placeholder="Email Address"/>
                 <input required class="auth-input-box" name="credentials[password]" type="password" placeholder="password"/>
                 <button class="auth-input-button" type="submit">Sign In</button>
+                <button class="auth-input-button" id="sign-up-link">Sign Up?</button>
               </form>
             </div>
             <div class="sign-up-container">
@@ -34,7 +36,6 @@
                 <button class="auth-input-button" type="submit">Sign Up</button>
               </form>
             </div>
-          </div>
         </div>
       </div>
 

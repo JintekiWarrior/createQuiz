@@ -1,53 +1,100 @@
 @import '~bootstrap/scss/bootstrap';
 
+// color variabels
+$marine: #6FB3B8;
+$offWhite: #F6F6F2;
+$babyBlue: #BADFE7;
+$lightGreen: #C2EDCE;
+
 html, body {
   height: 100%;
   font-size: 62.5%;
-  font-family: sans-serif;
+  font-family: 'Exo', sans-serif;
+  background-color: $offWhite;
+}
+
+.before-sign-in {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20rem auto 20rem;
+  grid-template-rows: 10rem auto 10rem;
 }
 
 // container for the sign in and sign up registration
 .reg-container {
-  margin: auto;
-  max-width: 40rem;
-  height: 40rem;
-  background-color: #90B1D9;
-  position: relative;
-  top: 15vh;
-  border-radius: 8%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  background-color: $babyBlue;
+  border: 1rem solid $marine;
 }
 
-// container to format the sign in and sign up forms inside the regular reg-container
-.inside-container {
-  margin: auto;
-  position: relative;
-  top: 5rem;
-  // background-color: red;
-  width: 30rem;
-  height: 30rem;
+// container for the sign in form
+.sign-in-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 
 // sign up and sign in h3 tag class
 .sign-heading {
-  font-size: 3rem;
-  margin: 1rem 1rem;
+  margin: 1rem;
+  font-size: 3.5rem;
   text-align: center;
+  font-family: 'Exo', sans-serif;
+  color: $offWhite;
 }
 
 // class for the input boxes for sign up and sign in
+input[type='email'] {
+  margin: 0;
+  font-size: 1.5rem;
+  vertical-align: bottom;
+}
+
+input[type='password'] {
+  font-size: 1.5rem;
+}
+
+.auth-input-button, input[type='submit'] {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $offWhite;
+  background-color: $babyBlue;
+}
+
+#sign-up-link {
+  margin-top: 1rem;
+  border: none;
+  color: $marine;
+}
+
 .auth-input-box {
   margin-top: 2px;
-  padding: 5px 0 5px 0;
-  width: 30rem;
-  border: 1px solid black;
+  padding: 2px 0 2px 0;
+  width: 100%;
+  border: 2px solid $marine;
   border-radius: 3px;
+
+  &::placeholder {
+    font-size: 1.8rem;
+    position: relative;
+    top: 5px;
+  }
 }
 
 // class for the buttons used for sign in and sign up
 .auth-input-button {
-  width: 30rem;
+  width: 100%;
   margin-top: 2px;
-  padding: 5px 0 5px 0;
+  padding: 2px 0 2px 0;
+  border: 2px solid $marine;
 }
 
 .after-sign-in {
