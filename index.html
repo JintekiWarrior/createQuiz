@@ -12,6 +12,8 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Norican&display=swap" rel="stylesheet">
     </head>
     <body>
 
@@ -34,6 +36,7 @@
                 <input required class="auth-input-box" name="credentials[password]" type="password" placeholder="password"/>
                 <input required class="auth-input-box" name="credentials[password_confirmation]" type="password" placeholder="password confirmation"/>
                 <button class="auth-input-button" type="submit">Sign Up</button>
+                <button class="auth-input-button" id="sign-in-link">Sign In?</button>
               </form>
             </div>
         </div>
@@ -60,9 +63,7 @@
             <!-- Create quiz form -->
             <form class="create-quiz">
               <input id="create-quiz-input" name="quiz[title]" type="text" placeholder="quiz title">
-              <textarea id="create-quiz-description" name="quiz[description]" cols="30" rows="10">
-                Add what the quiz is about here
-              </textarea>
+              <textarea id="create-quiz-description" name="quiz[description]" placeholder="Add what the quiz is about here" cols="30" rows="10"></textarea>
               <button id="create-quiz-submit" type="submit">Create</button>
             </form>
 
@@ -71,9 +72,7 @@
             <form class="update-quiz">
               <!-- <input required name="quiz[id]" type="text" placeholder="quiz id"> -->
               <input required id="update-quiz-title" name="quiz[title]" type="text" placeholder="new quiz title">
-              <textarea required id="update-quiz-description" name="quiz[description]" cols="30" rows="10">
-                Add new quiz description here
-              </textarea>
+              <textarea required id="update-quiz-description" name="quiz[description]" placeholder="Add new quiz description here" cols="30" rows="10"></textarea>
               <button id="update-quiz-submit" type="submit">Update Quiz</button>
             </form>
 
@@ -107,11 +106,7 @@
 
 
         </div>
-
       </div>
-
-      <!-- Message for sign in successes and error handlers -->
-      <p class="auth-message"></p>
 
     </body>
 </html>

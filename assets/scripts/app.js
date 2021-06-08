@@ -19,8 +19,12 @@ $(() => {
   // Authorization event listeners
   // event listener for the sign-up class attached to the form
   $('.sign-up').on('submit', authEvents.onSignUp)
+  // event listener for the show sign up form
+  $('#sign-up-link').on('click', appFunctions.showSignUpForm)
   // event listener for the sign-in class attached to the form
   $('.sign-in').on('submit', authEvents.onSignIn)
+  // event listener for the show sign in form
+  $('#sign-in-link').on('click', appFunctions.showSignInForm)
   // event listener for sign-out class attached to the button
   $('.sign-out').on('click', authEvents.onSignOut)
   // button to open up the change password form

@@ -1,10 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
 
 // color variabels
+$darkMarine: #388087;
 $marine: #6FB3B8;
-$offWhite: #F6F6F2;
 $babyBlue: #BADFE7;
-$lightGreen: #C2EDCE;
+$lightOrange: #ffc87c;
+$offWhite: #F6F6F2;
+$paleRed: #fa8072;
+$lighGreen: #93c572;
 
 html, body {
   height: 100%;
@@ -41,6 +44,14 @@ html, body {
   justify-content: center;
 }
 
+.sign-up-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 // sign up and sign in h3 tag class
 .sign-heading {
@@ -70,8 +81,21 @@ input[type='password'] {
 }
 
 #sign-up-link {
-  margin-top: 1rem;
+  background: none;
+  margin-top: 3rem;
   border: none;
+  padding: 0;
+  font-size: 1.2rem;
+  color: $marine;
+}
+
+#sign-in-link {
+  background: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  padding: 0;
+  font-size: 1.2rem;
   color: $marine;
 }
 
@@ -110,7 +134,8 @@ input[type='password'] {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: #1C0A93;
+  background-color: $darkMarine;
+  border: 3px solid $offWhite;
 }
 
 // container for the sidebar info
@@ -118,7 +143,8 @@ input[type='password'] {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
-  background-color: #1D7CF0;
+  background-color: $lightOrange;
+  border: 5px solid $offWhite;
 }
 
 // container to use to center all the forms and buttons used to create a quiz.
@@ -128,23 +154,27 @@ input[type='password'] {
   grid-row-start: 2;
   display: grid;
   grid-template-columns: 10rem auto 10rem;
-  grid-template-rows: 5rem auto 2rem;
-  background-color: #90B1D9;
+  grid-template-rows: 5rem auto 5rem;
+  background-color: $babyBlue;
 }
 
 // The main header of the page
 #main-header {
+  font-family: 'Norican', cursive;
   text-align: center;
-  font-size: 4rem;
-  color: white;
+  font-size: 5rem;
+  color: $offWhite;
 }
 
 #second-heading {
-  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-size: 4rem;
   grid-column-start: 2;
   grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   text-align: center;
-
+  color: $marine;
 }
 
 // container for just the create quiz forms
@@ -171,24 +201,79 @@ input[type='password'] {
 // title Input for the create quiz form
 #create-quiz-input {
   padding: 1rem;
+  border: 4px solid $darkMarine;
+  background-color: $offWhite;
+  border-radius: 10px;
+  outline: none;
+
+  &, input[type='text'] {
+    font-size: 2rem;
+  }
+}
+
+#create-quiz-description {
+  font-size: 1.5rem;
+  border: 4px solid $darkMarine;
+  border-radius: 10px;
+  outline: none;
 }
 
 // button to submit the create quiz form
 #create-quiz-submit {
-  padding: 1rem;
+  font-size: 2rem;
+  color: $darkMarine;
+  border: 2px solid $darkMarine;
+  border-radius: 10px;
+  background-color: $babyBlue;
 }
 
 #update-quiz-title {
   padding: 1rem;
+  border: 4px solid $darkMarine;
+  background-color: $offWhite;
+  border-radius: 10px;
+  outline: none;
+
+  &, input[type='text'] {
+    font-size: 2rem;
+  }
+}
+
+#update-quiz-description {
+  font-size: 1.5rem;
+  border: 4px solid $darkMarine;
+  border-radius: 10px;
+  outline: none;
 }
 
 #update-quiz-submit {
-  padding: 1rem;
+  font-size: 2rem;
+  color: $darkMarine;
+  border: 2px solid $darkMarine;
+  border-radius: 10px;
+  background-color: $babyBlue;
 }
 
 #show-quiz-display {
   display: flex;
   flex-direction: column;
+  background-color: $lighGreen;
+  border: 3px solid $darkMarine;
+
+  & #show-quiz-title {
+    color: $offWhite;
+    font-size: 3rem;
+  }
+
+  & #show-quiz-description {
+    color: $darkMarine;
+    font-size: 1.5rem;
+  }
+}
+
+#show-question-display {
+  background-color: $lightOrange;
+  border: 3px solid $darkMarine;
 }
 
 #show-quiz-title {
@@ -206,24 +291,58 @@ input[type='password'] {
   flex-direction: column;
 
   & input {
-    padding: 1rem;
+    font-size: 1.5rem;
   }
 
   & button {
-    padding: 1rem;
+    font-size: 1.5rem;
+    color: $darkMarine;
+    border: 2px solid $darkMarine;
+    background-color: $babyBlue;
   }
 }
 
 // button to index the quizes
 .index-quiz {
   width: 100%;
-  padding: .8rem;
+  font-size: 2.3rem;
+  background-color: $babyBlue;
+  border: 3px solid $marine;
+  color: $marine;
+  border-radius: 10px;
 }
 
 // text displayed from index
 .index-text {
-  color: white;
+  color: $offWhite;
+  text-align: center;
+
+  &:nth-child(1) {
+    font-size: 3rem;
+  }
 }
+
+.feature-button {
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 3px;
+  margin-right: 1px;
+  border: 2px solid $offWhite;
+  color: $offWhite;
+
+  &.show-quiz-button {
+    background-color: $lighGreen;
+  }
+
+  &.update-quiz-show {
+    background-color: $babyBlue;
+  }
+  &.delete-quiz {
+    background-color: $paleRed;
+  }
+}
+
 
 .change-password-container {
   grid-column-start: 1;
@@ -233,14 +352,50 @@ input[type='password'] {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  & .change-password-show {
+    font-size: 1rem;
+    height: 3rem;
+    color: $offWhite;
+    background-color: $marine;
+    border: 2px solid $darkMarine;
+    border-radius: 6px;
+  }
+
+  & .sign-out {
+    font-size: 1rem;
+    height: 3rem;
+    color: $offWhite;
+    background-color: $paleRed;
+    border: 2px solid $darkMarine;
+    border-radius: 6px;
+  }
 }
 
-.change-password-show {
+.change-password {
   width: 100%;
-  height: 3rem;
+
+  & input {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  & button {
+    font-size: 1rem;
+    width: 50%;
+    color: $offWhite;
+    background-color: $lighGreen;
+    border: 2px solid $darkMarine;
+    border-radius: 6px;
+  }
 }
 
-.sign-out {
-  width: 100%;
-  height: 3rem;
+.question {
+  margin: 1rem;
+  font-size: 2rem;
+  color: $darkMarine;
+}
+
+.answer {
+  font-size: 1.5rem;
 }

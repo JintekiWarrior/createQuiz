@@ -15,7 +15,19 @@ const showUpdateForm = function () {
   store.update = updateId
 }
 
+const showSignUpForm = function () {
+  $('.sign-in-container').hide()
+  $('.sign-up-container').show()
+}
+
+const showSignInForm = function () {
+  $('.sign-up-container').hide()
+  $('.sign-in-container').show()
+}
+
 module.exports = {
   showPassForm,
-  showUpdateForm
+  showUpdateForm,
+  showSignUpForm,
+  showSignInForm
 }

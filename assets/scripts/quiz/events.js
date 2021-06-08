@@ -49,7 +49,7 @@ const onUpdateQuiz = function (event) {
   console.log(quizId)
 
   api.updateQuiz(quizId, quizData)
-    .then(ui.onQuizSuccess)
+    .then(ui.onUpdateSuccess)
     .catch(ui.errorHandler)
 }
 

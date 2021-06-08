@@ -3,13 +3,12 @@
 // const store = require('./../store')
 
 const onCreateQuestionSuccess = function (res) {
-  console.log(res)
+  $('.create-question').trigger('reset')
 }
 
 const errorHandler = function (err) {
-  $('auth-message').text('Oops! Something went wrong. Status: ' + err.status)
+  $('.auth-message').text('Oops! Something went wrong. Status: ' + err.status)
 }
-
 
 module.exports = {
   onCreateQuestionSuccess,

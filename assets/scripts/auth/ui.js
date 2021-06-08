@@ -1,14 +1,22 @@
 'use strict'
 
 const store = require('./../store')
+// hide the sign-up form for styling, showing the after sign in below
+// erase this function and set the after-sign-in to hide for full functionlity
+// $('.before-sign-in').hide()
 
 // This info is hidden until sign in is successful
 $('.after-sign-in').hide()
+// Hides the sign up container at start
 $('.sign-up-container').hide()
 // This info will hide the change password form until the button is clicked
 $('.change-password').hide()
 // This will hide the update quiz form
 $('.update-quiz').hide()
+// hide the create question form at start
+$('#show-quiz-display').hide()
+$('#show-question-display').hide()
+$('.create-question').hide()
 
 // User interface event that triggers if the ajax call is successful
 // This will reset the form fields, and send a success message when the user
