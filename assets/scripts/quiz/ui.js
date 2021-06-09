@@ -3,7 +3,6 @@
 // const store = require('./../store')
 
 const createQuizSuccess = function (res) {
-  console.log(res)
   $('.create-quiz').trigger('reset')
   $('.auth-message').text('Quiz Created')
 
@@ -35,7 +34,7 @@ const onShowSuccess = function (res) {
   $('#show-quiz-display').show()
   $('#show-question-display').show()
   $('.create-question').show()
-  console.log(res)
+
   $('#show-quiz-display').html(`
     <h3 id="show-quiz-title">${res.title}</h3>
     <p id="show-quiz-description">${res.description}</p>

@@ -46,7 +46,6 @@ const onUpdateQuiz = function (event) {
   const quizData = getFormFields(event.target)
 
   const quizId = store.update
-  console.log(quizId)
 
   api.updateQuiz(quizId, quizData)
     .then(ui.onUpdateSuccess)
@@ -58,7 +57,6 @@ const onDeleteQuiz = function (event) {
 
   const deleteButton = event.target
   const quizId = $(deleteButton).data('id')
-  console.log(quizId)
 
   api.deleteQuiz(quizId)
     .then(ui.onDeleteSuccess)

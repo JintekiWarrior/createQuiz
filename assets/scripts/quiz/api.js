@@ -33,7 +33,6 @@ const showQuiz = function (quizId) {
 }
 
 const updateQuiz = function (quizId, quizData) {
-  console.log(quizId)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/quizzes/' + quizId,

@@ -10,9 +10,22 @@ const showPassForm = function () {
 // function that shows the update quiz form
 const showUpdateForm = function () {
   $('.create-quiz').hide()
+  $('#show-quiz-display').hide()
+  $('#show-question-display').hide()
+  $('.create-question').hide()
   $('.update-quiz').show()
+  $('#second-heading').text('Update a quiz')
   const updateId = $(event.target).data('id')
   store.update = updateId
+}
+
+const showCreateForm = function () {
+  $('.create-quiz').show()
+  $('#show-quiz-display').hide()
+  $('#show-question-display').hide()
+  $('.create-question').hide()
+  $('.update-quiz').hide()
+  $('#second-heading').text('Craft a quiz')
 }
 
 const showSignUpForm = function () {
@@ -29,5 +42,6 @@ module.exports = {
   showPassForm,
   showUpdateForm,
   showSignUpForm,
-  showSignInForm
+  showSignInForm,
+  showCreateForm
 }

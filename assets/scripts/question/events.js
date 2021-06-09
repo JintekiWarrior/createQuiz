@@ -10,7 +10,6 @@ const onCreateQuestion = function (event) {
   const data = getFormFields(event.target)
   const quizId = store.quizId
   data.question.quizId = quizId
-  console.log(data)
 
   api.createQuestion(data)
     .then(ui.onCreateQuestionSuccess)

@@ -35,6 +35,8 @@ $(() => {
   // Quiz template event listeners
   // event listener for the create-quiz class attached to the form
   $('.create-quiz').on('submit', quizEvents.onCreateQuiz)
+  // event listener to show the create quiz template
+  $('.create-quiz-show').on('click', appFunctions.showCreateForm)
   // event listener for the index-quiz class attached to a button
   $('.index-quiz').on('click', quizEvents.onIndexQuiz)
   // this button will show the update quiz form

@@ -36,7 +36,6 @@ const signInSuccess = function (response) {
   store.user = response.user
   $('.before-sign-in').hide()
   $('.after-sign-in').show()
-  console.log(response)
 }
 
 // Sends a message if the user successfully signs out. Then deletes the users
