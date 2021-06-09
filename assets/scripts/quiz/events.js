@@ -20,6 +20,11 @@ const onCreateQuiz = function (event) {
     .catch(ui.errorHandler)
 }
 
+// This will prevent the page from reloading when the My Quizzes
+// button is clicked. It will then make an api call and if successful
+// show the titles of the quizzes and some buttons.
+//
+// quiz index form event handler
 const onIndexQuiz = function (event) {
   event.preventDefault()
 

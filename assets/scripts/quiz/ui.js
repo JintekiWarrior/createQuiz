@@ -7,8 +7,8 @@ const createQuizSuccess = function (res) {
   $('.auth-message').text('Quiz Created')
 
   $('#quiz-display').html(`
-    <h3>${res.quiz.title}</h3>
-    <p>Description: ${res.quiz.description}</p>
+    <h3 class="create-quiz-text">${res.quiz.title}</h3>
+    <p class="create-quiz-text">Description: ${res.quiz.description}</p>
     `)
 }
 
