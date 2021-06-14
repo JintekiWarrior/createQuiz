@@ -23,6 +23,17 @@ html, body {
   grid-template-rows: 10rem auto 10rem;
 }
 
+#auth-message {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+
 // container for the sign in and sign up registration
 .reg-container {
   grid-column-start: 2;

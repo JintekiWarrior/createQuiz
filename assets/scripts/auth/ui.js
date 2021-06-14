@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('./../store')
+const appFunctions = require('./../functions.js')
 // hide the sign-up form for styling, showing the after sign in below
 // erase this function and set the after-sign-in to hide for full functionlity
 // $('.before-sign-in').hide()
@@ -17,13 +18,15 @@ $('.update-quiz').hide()
 $('#show-quiz-display').hide()
 $('#show-question-display').hide()
 $('.create-question').hide()
+$('#auth-message').hide()
 
 // User interface event that triggers if the ajax call is successful
 // This will reset the form fields, and send a success message when the user
 // successfully log in
 const signUpSuccess = function (response) {
   $('.sign-up').trigger('reset')
-  $('.auth-message').text('Sign up successful!')
+  $('#auth-message').text('Sign up successful!').show()
+  appFunctions.hideAuth()
 }
 
 // When the user signs in a message is sent to inform the user. Also the
@@ -32,7 +35,7 @@ const signUpSuccess = function (response) {
 // shows
 const signInSuccess = function (response) {
   $('.sign-in').trigger('reset')
-  $('.auth-message').text('Sign in successful!')
+  $('auth-message').text('Sign in successful!')
   store.user = response.user
   $('.before-sign-in').hide()
   $('.after-sign-in').show()
@@ -58,7 +61,8 @@ const changePasswordSuccess = function () {
 
 // Handles all authorization errors and prints a status message.
 const errorHandler = function (error) {
-  $('.auth-message').text('There was an error! status: ' + error.status)
+  $('#auth-message').text('There was an error! status: ' + error.status).show()
+  appFunctions.hideAuth()
 }
 
 module.exports = {

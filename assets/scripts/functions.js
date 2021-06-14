@@ -38,10 +38,17 @@ const showSignInForm = function () {
   $('.sign-in-container').show()
 }
 
+const hideAuth = function () {
+  setTimeout(function () {
+    $('#auth-message').hide()
+  }, 4000)
+}
+
 module.exports = {
   showPassForm,
   showUpdateForm,
   showSignUpForm,
   showSignInForm,
-  showCreateForm
+  showCreateForm,
+  hideAuth
 }
