@@ -17,6 +17,9 @@ const showUpdateForm = function () {
   $('#second-heading').text('Update a quiz')
   const updateId = $(event.target).data('id')
   store.update = updateId
+  // trigger reset for all forms on update
+  $('.create-quiz').trigger('reset')
+  $('.create-question').trigger('reset')
 }
 
 const showCreateForm = function () {
@@ -26,6 +29,9 @@ const showCreateForm = function () {
   $('.create-question').hide()
   $('.update-quiz').hide()
   $('#second-heading').text('Craft a quiz')
+  // trigger reset on all forms on create quiz
+  $('.update-quiz').trigger('reset')
+  $('.create-question').trigger('reset')
 }
 
 const showSignUpForm = function () {

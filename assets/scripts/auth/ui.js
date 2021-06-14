@@ -51,6 +51,10 @@ const signOutSuccess = function (response) {
   store.update = null
   $('.before-sign-in').show()
   $('.after-sign-in').hide()
+  // trigger reset for all forms on sign out
+  $('.create-quiz').trigger('reset')
+  $('.update-quiz').trigger('reset')
+  $('.create-question').trigger('reset')
 }
 
 const changePasswordSuccess = function () {

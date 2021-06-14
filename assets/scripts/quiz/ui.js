@@ -34,6 +34,10 @@ const onShowSuccess = function (res) {
   $('#show-quiz-display').show()
   $('#show-question-display').show()
   $('.create-question').show()
+  // trigger reset for all forms on show quiz success
+  $('.create-quiz').trigger('reset')
+  $('.update-quiz').trigger('reset')
+  $('.create-question').trigger('reset')
 
   $('#show-quiz-display').html(`
     <h3 id="show-quiz-title">${res.title}</h3>
