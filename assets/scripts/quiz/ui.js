@@ -2,10 +2,14 @@
 
 // const store = require('./../store')
 
+const appFunctions = require('./../functions.js')
+
 const createQuizSuccess = function (res) {
   $('.create-quiz').trigger('reset')
-  $('.auth-message').text('Quiz Created')
-
+  // shows a message when a quiz is created
+  $('#crud-message').text('creation success').show()
+  // hides the crud message after 4 seconds
+  appFunctions.hideCrud()
   $('#quiz-display').html(`
     <h3 class="create-quiz-text">${res.quiz.title}</h3>
     <p class="create-quiz-text">Description: ${res.quiz.description}</p>
@@ -13,7 +17,6 @@ const createQuizSuccess = function (res) {
 }
 
 const indexQuizSuccess = function (res) {
-  $('.auth-message').text('Index Success')
   let quizHTML = ''
   res.quiz.forEach(quiz => {
     quizHTML += `
@@ -59,15 +62,24 @@ const onShowSuccess = function (res) {
 
 const onUpdateSuccess = function (res) {
   $('.update-quiz').trigger('reset')
-  $('.auth-message').text('Update Successful')
+  // shows a message when a quiz is updated
+  $('#crud-message').text('update success').show()
+  // hides the crud message after 4 seconds
+  appFunctions.hideCrud()
 }
 
 const onDeleteSuccess = function (res) {
-  $('.auth-message').text('Delete Success')
+  // shows a message when a quiz is deleted
+  $('#crud-message').text('deletion success').show()
+  // hides the crud message after 4 seconds
+  appFunctions.hideCrud()
 }
 
-const errorHandler = function (err) {
-  $('auth-message').text('Oops! Something went wrong. Status: ' + err.status)
+const errorHandler = function () {
+  // shows message on failure
+  $('#crud-message').text('Oops! Something went wrong.')
+  // hides the crud message after 4 seconds
+  appFunctions.hideCrud()
 }
 
 module.exports = {

@@ -50,11 +50,18 @@ const hideAuth = function () {
   }, 4000)
 }
 
+const hideCrud = function () {
+  setTimeout(function () {
+    $('#crud-message').hide()
+  }, 4000)
+}
+
 module.exports = {
   showPassForm,
   showUpdateForm,
   showSignUpForm,
   showSignInForm,
   showCreateForm,
-  hideAuth
+  hideAuth,
+  hideCrud
 }

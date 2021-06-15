@@ -19,6 +19,7 @@ $('#show-quiz-display').hide()
 $('#show-question-display').hide()
 $('.create-question').hide()
 $('#auth-message').hide()
+$('#crud-message').hide()
 
 // User interface event that triggers if the ajax call is successful
 // This will reset the form fields, and send a success message when the user
