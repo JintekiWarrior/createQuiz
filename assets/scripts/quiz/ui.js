@@ -28,7 +28,13 @@ const indexQuizSuccess = function (res) {
       <button class="delete-quiz feature-button" data-id=${quiz._id}>Delete Quiz</button>
     `
   })
-  $('#quiz-display').html(quizHTML)
+  if (quizHTML.length === 0) {
+    $('#quiz-display').html(`
+      <h3 class="index-text">No Quizzes Here</h3>
+      `)
+  } else {
+    $('#quiz-display').html(quizHTML)
+  }
 }
 
 const onShowSuccess = function (res) {
@@ -77,7 +83,7 @@ const onDeleteSuccess = function (res) {
 
 const errorHandler = function () {
   // shows message on failure
-  $('#crud-message').text('Oops! Something went wrong.')
+  $('#crud-message').text('Oops! Something went wrong.').show()
   // hides the crud message after 4 seconds
   appFunctions.hideCrud()
 }

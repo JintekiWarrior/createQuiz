@@ -36,10 +36,11 @@ const signUpSuccess = function (response) {
 // shows
 const signInSuccess = function (response) {
   $('.sign-in').trigger('reset')
-  $('auth-message').text('Sign in successful!')
+  $('#crud-message').text('Welcome to Quiz Crafter!').show(400)
   store.user = response.user
   $('.before-sign-in').hide()
   $('.after-sign-in').show()
+  appFunctions.hideCrud()
 }
 
 // Sends a message if the user successfully signs out. Then deletes the users
@@ -60,8 +61,9 @@ const signOutSuccess = function (response) {
 
 const changePasswordSuccess = function () {
   $('.change-password').trigger('reset')
-  $('.auth-message').text('Password Changed Successfully!')
+  $('#crud-message').text('Password Changed!').show()
   $('.change-password').hide()
+  appFunctions.hideCrud()
 }
 
 // Handles all authorization errors and prints a status message.
@@ -70,10 +72,19 @@ const errorHandler = function (error) {
   appFunctions.hideAuth()
 }
 
+// handles errors for changePassword
+const errorHandler2 = function () {
+  // shows message on failure
+  $('#crud-message').text('Oops! Something went wrong.').show()
+  // hides the crud message after 4 seconds
+  appFunctions.hideCrud()
+}
+
 module.exports = {
   signUpSuccess,
   signInSuccess,
   signOutSuccess,
   changePasswordSuccess,
-  errorHandler
+  errorHandler,
+  errorHandler2
 }
