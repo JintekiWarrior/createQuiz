@@ -36,6 +36,7 @@ const signUpSuccess = function (response) {
 // shows
 const signInSuccess = function (response) {
   $('.sign-in').trigger('reset')
+  $('.sign-up').trigger('reset')
   $('#crud-message').text('Welcome to Quiz Crafter!').show(400)
   store.user = response.user
   $('.before-sign-in').hide()
@@ -57,6 +58,15 @@ const signOutSuccess = function (response) {
   $('.create-quiz').trigger('reset')
   $('.update-quiz').trigger('reset')
   $('.create-question').trigger('reset')
+  $('.change-password').trigger('reset')
+  $('.sign-up').trigger('reset')
+  // hides all the forms and shows the craft form
+  $('.change-password').hide()
+  $('.update-quiz').hide()
+  $('#show-quiz-display').hide()
+  $('#show-question-display').hide()
+  $('.create-question').hide()
+  $('.create-quiz').show()
 }
 
 const changePasswordSuccess = function () {

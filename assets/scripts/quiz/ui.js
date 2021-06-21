@@ -33,6 +33,8 @@ const indexQuizSuccess = function (res) {
       <h3 class="index-text">No Quizzes Here</h3>
       `)
   } else {
+    $('#crud message').html('Show Quizzes Success').show()
+    appFunctions.hideCrud()
     $('#quiz-display').html(quizHTML)
   }
 }

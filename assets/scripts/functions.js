@@ -37,6 +37,8 @@ const showCreateForm = function () {
 const showSignUpForm = function () {
   $('.sign-in-container').hide()
   $('.sign-up-container').show()
+  $('.sign-in').trigger('reset')
+  $('.sign-up').trigger('reset')
 }
 
 const showSignInForm = function () {
