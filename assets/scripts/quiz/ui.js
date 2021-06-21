@@ -29,13 +29,15 @@ const indexQuizSuccess = function (res) {
     `
   })
   if (quizHTML.length === 0) {
+    $('#crud-message').text('No Quizzes').show()
+    appFunctions.hideCrud()
     $('#quiz-display').html(`
       <h3 class="index-text">No Quizzes Here</h3>
-      `)
+      `).show()
   } else {
-    $('#crud message').html('Show Quizzes Success').show()
+    $('#quiz-display').html(quizHTML).show()
+    $('#crud-message').text('Show Quizzes Success').show()
     appFunctions.hideCrud()
-    $('#quiz-display').html(quizHTML)
   }
 }
 

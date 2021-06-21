@@ -67,6 +67,7 @@ const signOutSuccess = function (response) {
   $('#show-question-display').hide()
   $('.create-question').hide()
   $('.create-quiz').show()
+  $('#quiz-display').hide()
 }
 
 const changePasswordSuccess = function () {
