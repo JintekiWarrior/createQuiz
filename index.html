@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Norican&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+      <!-- This div contains all the forms before the user signs in. -->
+      <div class="before-sign-in">
+        <div id="auth-message"></div>
+        <div class="reg-container">
+            <div class="sign-in-container">
+              <h3 class="sign-heading">Sign In</h3>
+              <form class="sign-in">
+                <input required class="auth-input-box" name="credentials[email]" type="email" placeholder="Email Address"/>
+                <input required class="auth-input-box" name="credentials[password]" type="password" placeholder="Password"/>
+                <button class="auth-input-button" type="submit">Sign In</button>
+              </form>
+            <button class="auth-input-button" id="sign-up-link">Sign Up?</button>
+            </div>
+            <div class="sign-up-container">
+              <h3 class="sign-heading">Sign Up</h3>
+              <form class="sign-up">
+                <input required class="auth-input-box" name="credentials[email]" type="email" placeholder="Email Address"/>
+                <input required class="auth-input-box" name="credentials[password]" type="password" placeholder="Password"/>
+                <input required class="auth-input-box" name="credentials[password_confirmation]" type="password" placeholder="password confirmation"/>
+                <button class="auth-input-button" type="submit">Sign Up</button>
+              </form>
+              <button class="auth-input-button" id="sign-in-link">Sign In?</button>
+            </div>
+        </div>
+      </div>
+
+      <!-- This div conatins all the forms and info for after the user signs in -->
+      <div class="after-sign-in">
+        <!-- Quiz CRUD forms -->
+        <div class="sidebar-container">
+          <!-- Index quizzes button -->
+          <button class="index-quiz">My Quizzes</button>
+          <div id="quiz-display"></div>
+        </div>
+
+        <div class="navbar">
+          <h1 id="main-header">Quiz Crafter</h1>
+        </div>
+
+
+        <div class="quiz-template-container">
+          <div class="heading-container">
+            <h2 id="second-heading">Craft a Quiz</h2>
+            <div id="crud-message"></div>
+          </div>
+          <div class="create-quiz-container">
+            <!-- Create quiz form -->
+            <form class="create-quiz">
+              <input id="create-quiz-input" name="quiz[title]" type="text" placeholder="quiz title">
+              <textarea id="create-quiz-description" name="quiz[description]" placeholder="Add what the quiz is about here" cols="30" rows="10"></textarea>
+              <button id="create-quiz-submit" type="submit">Create</button>
+            </form>
+
+
+            <!-- Update Quiz form -->
+            <form class="update-quiz">
+              <!-- <input required name="quiz[id]" type="text" placeholder="quiz id"> -->
+              <input required id="update-quiz-title" name="quiz[title]" type="text" placeholder="new quiz title">
+              <textarea required id="update-quiz-description" name="quiz[description]" placeholder="Add new quiz description here" cols="30" rows="10"></textarea>
+              <button id="update-quiz-submit" type="submit">Update Quiz</button>
+            </form>
+
+            <!-- show a quiz -->
+            <div id="show-quiz-display"></div>
+            <div id="show-question-display"></div>
+
+            <!-- Create a question -->
+            <form class="create-question">
+              <input required class="create-question-input" name="question[question]" type="text" placeholder="enter question">
+              <input required class="create-right-answer" name="question[rightAnswer]" type="text" placeholder="enter correct answer">
+              <input required class="create-wrong-answer" name="question[wrongAnswer]" type="text" placeholder="enter wrong answer">
+              <input required class="create-wrong-answer" name="question[wrongAnswer2]" type="text" placeholder="enter wrong answer">
+              <button class="create-question" type="submit">Create</button>
+            </form>
+
+          </div>
+
+
+          <!-- Change password form -->
+          <div class="change-password-container">
+            <button class="create-quiz-show">Create Quiz</button>
+            <button class="change-password-show">Change Password</button>
+            <form class="change-password">
+              <input required name="passwords[old]" type="password" placeholder="old password"/>
+              <input required name="passwords[new]" type="password" placeholder="new password"/>
+              <button type="submit">Submit</button>
+            </form>
+            <!-- sign out button -->
+            <button class="sign-out">Sign Out</button>
+          </div>
+
+
+        </div>
+      </div>
+
+    </body>
+</html>
